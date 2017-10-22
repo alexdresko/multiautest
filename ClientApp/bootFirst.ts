@@ -1,3 +1,5 @@
+import 'aurelia-loader-webpack';
+import 'aurelia-bootstrapper';
 import 'isomorphic-fetch';
 import { Aurelia, PLATFORM } from 'aurelia-framework';
 import { HttpClient } from 'aurelia-fetch-client';
