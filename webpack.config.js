@@ -7,7 +7,7 @@ module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
     return [{
         stats: { modules: false },
-        entry: { 'app': 'aurelia-bootstrapper' },
+        entry: { 'firstApp': 'aurelia-bootstrapper' },
         resolve: {
             extensions: ['.ts', '.js'],
             modules: ['ClientApp', 'node_modules'],
@@ -31,7 +31,7 @@ module.exports = (env) => {
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
             }),
-            new AureliaPlugin({ aureliaApp: 'boot' })
+            new AureliaPlugin({ aureliaApp: 'bootFirst' })
         ].concat(isDevBuild ? [
             new webpack.SourceMapDevToolPlugin({
                 filename: '[file].map', // Remove this line if you prefer inline source maps
