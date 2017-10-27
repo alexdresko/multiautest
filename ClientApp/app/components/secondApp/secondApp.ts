@@ -20,6 +20,13 @@ export class SecondApp {
             moduleId: PLATFORM.moduleName('../another/another'),
             nav: true,
             title: 'Another'
+        }, {
+            route: 'fetch-data',
+            name: 'fetchdata',
+            settings: { icon: 'th-list' },
+            moduleId: PLATFORM.moduleName('../fetchdata/fetchdata'),
+            nav: true,
+            title: 'Fetch data'
         }]);
 
         this.router = router;

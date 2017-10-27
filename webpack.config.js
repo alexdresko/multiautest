@@ -34,7 +34,11 @@ module.exports = (env) => {
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
             }),
-            new AureliaPlugin({ noWebpackLoader: true, aureliaApp: undefined })
+            new AureliaPlugin({ noWebpackLoader: true, aureliaApp: undefined }),
+            new webpack.optimize.CommonsChunkPlugin({
+                minChunks: 2,
+                name: "common"
+            })
         ].concat(isDevBuild ? [
             new webpack.SourceMapDevToolPlugin({
                 filename: '[file].map', // Remove this line if you prefer inline source maps
