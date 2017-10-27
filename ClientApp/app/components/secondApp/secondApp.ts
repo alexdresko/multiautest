@@ -7,12 +7,19 @@ export class SecondApp {
     configureRouter(config: RouterConfiguration, router: Router) {
         config.title = 'Second App';
         config.map([{
-            route: [ '', 'home' ],
+            route: [ '/', 'second' ],
             name: 'home',
             settings: { icon: 'home' },
             moduleId: PLATFORM.moduleName('../home/home'),
             nav: true,
             title: 'Home'
+        }, {
+            route: 'second/another',
+            name: 'another',
+            settings: { icon: 'education' },
+            moduleId: PLATFORM.moduleName('../another/another'),
+            nav: true,
+            title: 'Another'
         }]);
 
         this.router = router;
