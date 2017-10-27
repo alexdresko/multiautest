@@ -1,5 +1,8 @@
 {
   "name": "multiautest",
+  "scripts": {
+    "webpack-all": "webpack --cofig"
+  },
   "private": true,
   "version": "0.0.0",
   "dependencies": {

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
 declare const IS_DEV_BUILD: boolean; // The value is supplied by Webpack during the build
 
+PLATFORM.moduleName("bootFirst");
 export function configure(aurelia: Aurelia) {
     aurelia.use.standardConfiguration();
 
