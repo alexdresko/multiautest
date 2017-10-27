@@ -5,7 +5,7 @@ export class FirstApp {
     router: Router;
 
     configureRouter(config: RouterConfiguration, router: Router) {
-        config.title = 'Aurelia';
+        config.title = 'First App';
         config.map([{
             route: [ '', 'home' ],
             name: 'home',

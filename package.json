@@ -1,7 +1,8 @@
 {
   "name": "multiautest",
   "scripts": {
-    "webpack-all": "webpack --cofig"
+    "webpack-all": "webpack --config webpack.config.vendor.js && webpack",
+    "clean": "rmdir wwwroot\\dist /S /Q"
   },
   "private": true,
   "version": "0.0.0",

@@ -8,7 +8,8 @@ module.exports = (env) => {
     return [{
         stats: { modules: false },
         entry: { 
-            'firstApp': 'bootFirst'
+            'firstApp': 'bootFirst',
+            'secondApp': 'bootSecond'
         },
         resolve: {
             extensions: ['.ts', '.js'],
